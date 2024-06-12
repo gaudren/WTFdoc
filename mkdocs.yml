@@ -1,0 +1,4 @@
+site_name: WTFdoc
+site_url: https://gaudren.github.io/WTFdoc/
+theme:
+  name: material

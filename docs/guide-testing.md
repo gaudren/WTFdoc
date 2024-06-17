@@ -1,3 +1,6 @@
+---
+weight: 2
+---
 # Writing your First Test
 ## Prerequisites 
 * NodeJS >= 18.14.2
@@ -22,7 +25,7 @@ To build and run the project, run:
 npm run build && npm start
 ``` 
 
-Then open your browser to <http://localhost:3000/>.
+Then open your browser to <http://localhost:3000/>. See [The Manual Glue & You](./guide-manual.md) for detailed instructions on how to use the manual glue.
 
 ## Adding a Test
 The tests can be found in [`client/src/tests/eth`](https://github.com/wallet-test-framework/framework/tree/master/client/src/tests/eth), organized into files based on the RPC endpoint being tested. If your test fits in an existing file, you may add it accordingly. If not, add a new file following the current convention, and update the list of test files found in [`/client/src/tests.ts`](https://github.com/wallet-test-framework/framework/blob/master/client/src/tests.ts).
@@ -98,6 +101,15 @@ await wallet.glue.sendTransaction({
     action: "approve",
 });
 ```
+### Trying your Test
+To execute a suite of tests, you can use the `grep` query parameter:
+```
+http://localhost:3000/?grep=estimateGas
+```
+Where `estimateGas` is the first argument passed to Mocha's `describe`. 
+
+For an up to date list of tests, see [`client/src/tests/eth`](https://github.com/wallet-test-framework/framework/tree/master/client/src/tests/eth). See [The Manual Glue & You](./guide-manual.md) for detailed instructions on how to use the manual glue.
+
 ## Coding Standards
 Our coding standards are enforced by [Prettier](https://www.npmjs.com/package/prettier), and [ESLint](https://www.npmjs.com/package/eslint).
 

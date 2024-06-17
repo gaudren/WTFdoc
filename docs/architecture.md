@@ -1,3 +1,6 @@
+---
+weight: 1
+---
 # Architecture
 ### Overview
 ![image](./img/diagram.svg "Diagram")
